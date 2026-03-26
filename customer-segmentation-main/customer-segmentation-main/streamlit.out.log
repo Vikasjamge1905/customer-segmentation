@@ -1,0 +1,372 @@
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.1.40:8501
+  External URL: http://103.51.133.119:8501
+
+============================================================
+DATA CLEANING PROCESS
+============================================================
+Final cleaned dataset: 5000 rows, 5 columns
+
++------------------------- Traceback (most recent call last) --------------------------+
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexes\bas |
+| e.py:3812 in get_loc                                                                 |
+|                                                                                      |
+|   3809         """                                                                   |
+|   3810         casted_key = self._maybe_cast_indexer(key)                            |
+|   3811         try:                                                                  |
+| > 3812             return self._engine.get_loc(casted_key)                           |
+|   3813         except KeyError as err:                                               |
+|   3814             if isinstance(casted_key, slice) or (                             |
+|   3815                 isinstance(casted_key, abc.Iterable)                          |
+|                                                                                      |
+| in pandas._libs.index.IndexEngine.get_loc:167                                        |
+|                                                                                      |
+| in pandas._libs.index.IndexEngine.get_loc:196                                        |
+|                                                                                      |
+| in pandas._libs.hashtable.PyObjectHashTable.get_item:7088                            |
+|                                                                                      |
+| in pandas._libs.hashtable.PyObjectHashTable.get_item:7096                            |
++--------------------------------------------------------------------------------------+
+KeyError: np.int32(0)
+
+The above exception was the direct cause of the following exception:
+
++------------------------- Traceback (most recent call last) --------------------------+
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\scrip |
+| trunner\exec_code.py:129 in exec_func_with_error_handling                            |
+|                                                                                      |
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\scrip |
+| trunner\script_runner.py:689 in code_to_exec                                         |
+|                                                                                      |
+| C:\customer-segmentation-main\customer-segmentation-main\app.py:443 in <module>      |
+|                                                                                      |
+|   440                                                                                |
+|   441                                                                                |
+|   442 if __name__ == "__main__":                                                     |
+| > 443     main()                                                                     |
+|   444                                                                                |
+|                                                                                      |
+| C:\customer-segmentation-main\customer-segmentation-main\app.py:390 in main          |
+|                                                                                      |
+|   387                                                                                |
+|   388         for cluster_id in sorted(clustered_df['Cluster'].unique()):            |
+|   389             if cluster_id != -1:                                               |
+| > 390                 segment, description, strategy = interpret_cluster(cluster_id) |
+|   391                 count = len(clustered_df[clustered_df['Cluster'] == cluster_id |
+|   392                 pct = (count / len(clustered_df)) * 100                        |
+|   393                                                                                |
+|                                                                                      |
+| C:\customer-segmentation-main\customer-segmentation-main\app.py:354 in               |
+| interpret_cluster                                                                    |
+|                                                                                      |
+|   351                                                                                |
+|   352         def interpret_cluster(cluster_id):                                     |
+|   353             """Interpret cluster characteristics."""                           |
+| > 354             row = cluster_profiles_df[cluster_id]                              |
+|   355                                                                                |
+|   356             r_mean = row['Recency_mean']                                       |
+|   357             f_mean = row['Frequency_mean']                                     |
+|                                                                                      |
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\pandas\core\frame.py:41 |
+| 13 in __getitem__                                                                    |
+|                                                                                      |
+|    4110         if is_single_key:                                                    |
+|    4111             if self.columns.nlevels > 1:                                     |
+|    4112                 return self._getitem_multilevel(key)                         |
+| >  4113             indexer = self.columns.get_loc(key)                              |
+|    4114             if is_integer(indexer):                                          |
+|    4115                 indexer = [indexer]                                          |
+|    4116         else:                                                                |
+|                                                                                      |
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexes\bas |
+| e.py:3819 in get_loc                                                                 |
+|                                                                                      |
+|   3816                 and any(isinstance(x, slice) for x in casted_key)             |
+|   3817             ):                                                                |
+|   3818                 raise InvalidIndexError(key)                                  |
+| > 3819             raise KeyError(key) from err                                      |
+|   3820         except TypeError:                                                     |
+|   3821             # If we have a listlike key, _check_indexing_error will raise     |
+|   3822             #  InvalidIndexError. Otherwise we fall through and re-raise      |
++--------------------------------------------------------------------------------------+
+KeyError: np.int32(0)
+============================================================
+DATA CLEANING PROCESS
+============================================================
+Final cleaned dataset: 5000 rows, 5 columns
+
++------------------------- Traceback (most recent call last) --------------------------+
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexes\bas |
+| e.py:3812 in get_loc                                                                 |
+|                                                                                      |
+|   3809         """                                                                   |
+|   3810         casted_key = self._maybe_cast_indexer(key)                            |
+|   3811         try:                                                                  |
+| > 3812             return self._engine.get_loc(casted_key)                           |
+|   3813         except KeyError as err:                                               |
+|   3814             if isinstance(casted_key, slice) or (                             |
+|   3815                 isinstance(casted_key, abc.Iterable)                          |
+|                                                                                      |
+| in pandas._libs.index.IndexEngine.get_loc:167                                        |
+|                                                                                      |
+| in pandas._libs.index.IndexEngine.get_loc:196                                        |
+|                                                                                      |
+| in pandas._libs.hashtable.PyObjectHashTable.get_item:7088                            |
+|                                                                                      |
+| in pandas._libs.hashtable.PyObjectHashTable.get_item:7096                            |
++--------------------------------------------------------------------------------------+
+KeyError: np.int32(0)
+
+The above exception was the direct cause of the following exception:
+
++------------------------- Traceback (most recent call last) --------------------------+
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\scrip |
+| trunner\exec_code.py:129 in exec_func_with_error_handling                            |
+|                                                                                      |
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\scrip |
+| trunner\script_runner.py:689 in code_to_exec                                         |
+|                                                                                      |
+| C:\customer-segmentation-main\customer-segmentation-main\app.py:443 in <module>      |
+|                                                                                      |
+|   440                                                                                |
+|   441                                                                                |
+|   442 if __name__ == "__main__":                                                     |
+| > 443     main()                                                                     |
+|   444                                                                                |
+|                                                                                      |
+| C:\customer-segmentation-main\customer-segmentation-main\app.py:390 in main          |
+|                                                                                      |
+|   387                                                                                |
+|   388         for cluster_id in sorted(clustered_df['Cluster'].unique()):            |
+|   389             if cluster_id != -1:                                               |
+| > 390                 segment, description, strategy = interpret_cluster(cluster_id) |
+|   391                 count = len(clustered_df[clustered_df['Cluster'] == cluster_id |
+|   392                 pct = (count / len(clustered_df)) * 100                        |
+|   393                                                                                |
+|                                                                                      |
+| C:\customer-segmentation-main\customer-segmentation-main\app.py:354 in               |
+| interpret_cluster                                                                    |
+|                                                                                      |
+|   351                                                                                |
+|   352         def interpret_cluster(cluster_id):                                     |
+|   353             """Interpret cluster characteristics."""                           |
+| > 354             row = cluster_profiles_df[cluster_id]                              |
+|   355                                                                                |
+|   356             r_mean = row['Recency_mean']                                       |
+|   357             f_mean = row['Frequency_mean']                                     |
+|                                                                                      |
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\pandas\core\frame.py:41 |
+| 13 in __getitem__                                                                    |
+|                                                                                      |
+|    4110         if is_single_key:                                                    |
+|    4111             if self.columns.nlevels > 1:                                     |
+|    4112                 return self._getitem_multilevel(key)                         |
+| >  4113             indexer = self.columns.get_loc(key)                              |
+|    4114             if is_integer(indexer):                                          |
+|    4115                 indexer = [indexer]                                          |
+|    4116         else:                                                                |
+|                                                                                      |
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexes\bas |
+| e.py:3819 in get_loc                                                                 |
+|                                                                                      |
+|   3816                 and any(isinstance(x, slice) for x in casted_key)             |
+|   3817             ):                                                                |
+|   3818                 raise InvalidIndexError(key)                                  |
+| > 3819             raise KeyError(key) from err                                      |
+|   3820         except TypeError:                                                     |
+|   3821             # If we have a listlike key, _check_indexing_error will raise     |
+|   3822             #  InvalidIndexError. Otherwise we fall through and re-raise      |
++--------------------------------------------------------------------------------------+
+KeyError: np.int32(0)
+============================================================
+DATA CLEANING PROCESS
+============================================================
+Final cleaned dataset: 5000 rows, 5 columns
+
+============================================================
+DATA CLEANING PROCESS
+============================================================
+Final cleaned dataset: 5000 rows, 5 columns
+
+============================================================
+DATA CLEANING PROCESS
+============================================================
+Final cleaned dataset: 5000 rows, 5 columns
+
++------------------------- Traceback (most recent call last) --------------------------+
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexes\bas |
+| e.py:3812 in get_loc                                                                 |
+|                                                                                      |
+|   3809         """                                                                   |
+|   3810         casted_key = self._maybe_cast_indexer(key)                            |
+|   3811         try:                                                                  |
+| > 3812             return self._engine.get_loc(casted_key)                           |
+|   3813         except KeyError as err:                                               |
+|   3814             if isinstance(casted_key, slice) or (                             |
+|   3815                 isinstance(casted_key, abc.Iterable)                          |
+|                                                                                      |
+| in pandas._libs.index.IndexEngine.get_loc:167                                        |
+|                                                                                      |
+| in pandas._libs.index.IndexEngine.get_loc:196                                        |
+|                                                                                      |
+| in pandas._libs.hashtable.PyObjectHashTable.get_item:7088                            |
+|                                                                                      |
+| in pandas._libs.hashtable.PyObjectHashTable.get_item:7096                            |
++--------------------------------------------------------------------------------------+
+KeyError: np.int32(0)
+
+The above exception was the direct cause of the following exception:
+
++------------------------- Traceback (most recent call last) --------------------------+
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\scrip |
+| trunner\exec_code.py:129 in exec_func_with_error_handling                            |
+|                                                                                      |
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\scrip |
+| trunner\script_runner.py:689 in code_to_exec                                         |
+|                                                                                      |
+| C:\customer-segmentation-main\customer-segmentation-main\app.py:443 in <module>      |
+|                                                                                      |
+|   440                                                                                |
+|   441                                                                                |
+|   442 if __name__ == "__main__":                                                     |
+| > 443     main()                                                                     |
+|   444                                                                                |
+|                                                                                      |
+| C:\customer-segmentation-main\customer-segmentation-main\app.py:390 in main          |
+|                                                                                      |
+|   387                                                                                |
+|   388         for cluster_id in sorted(clustered_df['Cluster'].unique()):            |
+|   389             if cluster_id != -1:                                               |
+| > 390                 segment, description, strategy = interpret_cluster(cluster_id) |
+|   391                 count = len(clustered_df[clustered_df['Cluster'] == cluster_id |
+|   392                 pct = (count / len(clustered_df)) * 100                        |
+|   393                                                                                |
+|                                                                                      |
+| C:\customer-segmentation-main\customer-segmentation-main\app.py:354 in               |
+| interpret_cluster                                                                    |
+|                                                                                      |
+|   351                                                                                |
+|   352         def interpret_cluster(cluster_id):                                     |
+|   353             """Interpret cluster characteristics."""                           |
+| > 354             row = cluster_profiles_df[cluster_id]                              |
+|   355                                                                                |
+|   356             r_mean = row['Recency_mean']                                       |
+|   357             f_mean = row['Frequency_mean']                                     |
+|                                                                                      |
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\pandas\core\frame.py:41 |
+| 13 in __getitem__                                                                    |
+|                                                                                      |
+|    4110         if is_single_key:                                                    |
+|    4111             if self.columns.nlevels > 1:                                     |
+|    4112                 return self._getitem_multilevel(key)                         |
+| >  4113             indexer = self.columns.get_loc(key)                              |
+|    4114             if is_integer(indexer):                                          |
+|    4115                 indexer = [indexer]                                          |
+|    4116         else:                                                                |
+|                                                                                      |
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexes\bas |
+| e.py:3819 in get_loc                                                                 |
+|                                                                                      |
+|   3816                 and any(isinstance(x, slice) for x in casted_key)             |
+|   3817             ):                                                                |
+|   3818                 raise InvalidIndexError(key)                                  |
+| > 3819             raise KeyError(key) from err                                      |
+|   3820         except TypeError:                                                     |
+|   3821             # If we have a listlike key, _check_indexing_error will raise     |
+|   3822             #  InvalidIndexError. Otherwise we fall through and re-raise      |
++--------------------------------------------------------------------------------------+
+KeyError: np.int32(0)
+============================================================
+DATA CLEANING PROCESS
+============================================================
+Final cleaned dataset: 5000 rows, 5 columns
+
++------------------------- Traceback (most recent call last) --------------------------+
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexes\bas |
+| e.py:3812 in get_loc                                                                 |
+|                                                                                      |
+|   3809         """                                                                   |
+|   3810         casted_key = self._maybe_cast_indexer(key)                            |
+|   3811         try:                                                                  |
+| > 3812             return self._engine.get_loc(casted_key)                           |
+|   3813         except KeyError as err:                                               |
+|   3814             if isinstance(casted_key, slice) or (                             |
+|   3815                 isinstance(casted_key, abc.Iterable)                          |
+|                                                                                      |
+| in pandas._libs.index.IndexEngine.get_loc:167                                        |
+|                                                                                      |
+| in pandas._libs.index.IndexEngine.get_loc:196                                        |
+|                                                                                      |
+| in pandas._libs.hashtable.PyObjectHashTable.get_item:7088                            |
+|                                                                                      |
+| in pandas._libs.hashtable.PyObjectHashTable.get_item:7096                            |
++--------------------------------------------------------------------------------------+
+KeyError: np.int32(0)
+
+The above exception was the direct cause of the following exception:
+
++------------------------- Traceback (most recent call last) --------------------------+
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\scrip |
+| trunner\exec_code.py:129 in exec_func_with_error_handling                            |
+|                                                                                      |
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\scrip |
+| trunner\script_runner.py:689 in code_to_exec                                         |
+|                                                                                      |
+| C:\customer-segmentation-main\customer-segmentation-main\app.py:443 in <module>      |
+|                                                                                      |
+|   440                                                                                |
+|   441                                                                                |
+|   442 if __name__ == "__main__":                                                     |
+| > 443     main()                                                                     |
+|   444                                                                                |
+|                                                                                      |
+| C:\customer-segmentation-main\customer-segmentation-main\app.py:390 in main          |
+|                                                                                      |
+|   387                                                                                |
+|   388         for cluster_id in sorted(clustered_df['Cluster'].unique()):            |
+|   389             if cluster_id != -1:                                               |
+| > 390                 segment, description, strategy = interpret_cluster(cluster_id) |
+|   391                 count = len(clustered_df[clustered_df['Cluster'] == cluster_id |
+|   392                 pct = (count / len(clustered_df)) * 100                        |
+|   393                                                                                |
+|                                                                                      |
+| C:\customer-segmentation-main\customer-segmentation-main\app.py:354 in               |
+| interpret_cluster                                                                    |
+|                                                                                      |
+|   351                                                                                |
+|   352         def interpret_cluster(cluster_id):                                     |
+|   353             """Interpret cluster characteristics."""                           |
+| > 354             row = cluster_profiles_df[cluster_id]                              |
+|   355                                                                                |
+|   356             r_mean = row['Recency_mean']                                       |
+|   357             f_mean = row['Frequency_mean']                                     |
+|                                                                                      |
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\pandas\core\frame.py:41 |
+| 13 in __getitem__                                                                    |
+|                                                                                      |
+|    4110         if is_single_key:                                                    |
+|    4111             if self.columns.nlevels > 1:                                     |
+|    4112                 return self._getitem_multilevel(key)                         |
+| >  4113             indexer = self.columns.get_loc(key)                              |
+|    4114             if is_integer(indexer):                                          |
+|    4115                 indexer = [indexer]                                          |
+|    4116         else:                                                                |
+|                                                                                      |
+| C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexes\bas |
+| e.py:3819 in get_loc                                                                 |
+|                                                                                      |
+|   3816                 and any(isinstance(x, slice) for x in casted_key)             |
+|   3817             ):                                                                |
+|   3818                 raise InvalidIndexError(key)                                  |
+| > 3819             raise KeyError(key) from err                                      |
+|   3820         except TypeError:                                                     |
+|   3821             # If we have a listlike key, _check_indexing_error will raise     |
+|   3822             #  InvalidIndexError. Otherwise we fall through and re-raise      |
++--------------------------------------------------------------------------------------+
+KeyError: np.int32(0)

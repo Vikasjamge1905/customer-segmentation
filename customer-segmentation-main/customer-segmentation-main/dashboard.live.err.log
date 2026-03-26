@@ -1,0 +1,19 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [26/Mar/2026 15:14:52] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Mar/2026 15:15:45] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Mar/2026 15:15:45] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [26/Mar/2026 15:16:00] "GET /api/sample-data HTTP/1.1" 200 -
+127.0.0.1 - - [26/Mar/2026 15:16:11] "GET /api/rfm-analysis HTTP/1.1" 200 -
+127.0.0.1 - - [26/Mar/2026 15:16:19] "POST /api/cluster HTTP/1.1" 200 -
+127.0.0.1 - - [26/Mar/2026 15:45:24] "GET /api/export-json HTTP/1.1" 400 -
+127.0.0.1 - - [26/Mar/2026 15:45:45] "GET /api/export-csv HTTP/1.1" 200 -
+127.0.0.1 - - [26/Mar/2026 16:08:32] "POST /api/cluster HTTP/1.1" 200 -
+127.0.0.1 - - [26/Mar/2026 16:08:39] "POST /api/cluster HTTP/1.1" 200 -
+127.0.0.1 - - [26/Mar/2026 16:08:46] "POST /api/cluster HTTP/1.1" 200 -
+127.0.0.1 - - [26/Mar/2026 16:08:54] "POST /api/cluster HTTP/1.1" 200 -
+127.0.0.1 - - [26/Mar/2026 16:09:05] "POST /api/cluster HTTP/1.1" 200 -
+127.0.0.1 - - [26/Mar/2026 16:10:42] "GET /api/interpret HTTP/1.1" 200 -
+127.0.0.1 - - [26/Mar/2026 16:12:29] "GET /api/rfm-analysis HTTP/1.1" 200 -
+127.0.0.1 - - [26/Mar/2026 16:12:33] "POST /api/cluster HTTP/1.1" 200 -

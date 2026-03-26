@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-02-19T15:32:21.902295",
+  "total_customers": 500,
+  "rfm_statistics": {
+    "total_customers": 500,
+    "recency_mean": 71.562,
+    "recency_median": 49.0,
+    "frequency_mean": 10.0,
+    "frequency_median": 10.0,
+    "monetary_mean": 5349.83254,
+    "monetary_median": 5252.395,
+    "total_revenue": 2674916.27
+  },
+  "clustering_evaluation": {
+    "silhouette_score": 0.30448184326617345,
+    "davies_bouldin_score": 0.9916377360752517,
+    "calinski_harabasz_score": 345.70882807851564,
+    "n_noise_points": "0"
+  },
+  "pca_variance": [
+    0.6519393608161969,
+    0.28251725617088785
+  ]
+}

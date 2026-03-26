@@ -1,0 +1,5 @@
+cluster,segment,count,percentage,avg_recency,avg_frequency,avg_monetary,description,strategy
+0,At Risk,203,40.6,47.9,10.16,5233.86,"Active but low value, may leave","Upsell, incentives, engagement"
+1,Lost,105,21.0,58.74,6.35,2897.18,No recent purchases,"Re-engagement campaigns, surveys"
+2,Champions,131,26.200000000000003,47.98,13.98,8209.17,"Best customers: Recent, Frequent, High Value","Reward loyalty, exclusive offers, VIP treatment"
+3,Lost,61,12.2,223.0,7.18,3817.01,No recent purchases,"Re-engagement campaigns, surveys"
